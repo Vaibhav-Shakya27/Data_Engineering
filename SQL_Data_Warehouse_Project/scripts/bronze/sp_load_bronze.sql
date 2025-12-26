@@ -1,3 +1,11 @@
+/*
+----------------------------------
+The script creates a proc which, when executed loads data to all crm and erp tables
+
+
+----------------------------------
+*/
+
 CREATE OR ALTER PROCEDURE bronze.sp_load_bronze as 
 BEGIN
 	
