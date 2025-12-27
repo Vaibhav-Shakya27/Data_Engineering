@@ -59,7 +59,6 @@ maintainence NVARCHAR(50)
 GO
 
 -- Creating CRM tables
-
 if object_id ('bronze.crm_cust_info','U') is not null
 	drop table bronze.crm_cust_info;
 
@@ -68,8 +67,8 @@ CREATE TABLE bronze.crm_cust_info (
 	cst_key NVARCHAR(50),
 	cst_firstname NVARCHAR(50),
 	cst_lastname NVARCHAR(50),
-	cst_marital_status CHAR,
-	cst_gndr CHAR,
+	cst_marital_status NVARCHAR(50),
+	cst_gndr NVARCHAR(50),
 	cst_create_date DATE
 
 
