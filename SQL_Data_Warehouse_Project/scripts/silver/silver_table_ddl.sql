@@ -63,7 +63,7 @@ dwh_creation_date DATETIME2 DEFAULT GETDATE()
 GO
 
 -- Creating CRM tables
-
+	
 if object_id ('silver.crm_cust_info','U') is not null
 	drop table silver.crm_cust_info;
 
@@ -72,10 +72,9 @@ CREATE TABLE silver.crm_cust_info (
 	cst_key NVARCHAR(50),
 	cst_firstname NVARCHAR(50),
 	cst_lastname NVARCHAR(50),
-	cst_marital_status CHAR,
-	cst_gndr CHAR,
-	cst_create_date DATE,
-	dwh_creation_date DATETIME2 DEFAULT GETDATE()
+	cst_marital_status NVARCHAR(50),
+	cst_gndr NVARCHAR(50),
+	cst_create_date DATE
 
 
 );
