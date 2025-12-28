@@ -87,16 +87,17 @@ if object_id ('silver.crm_prd_info','U') is not null
 
 CREATE TABLE silver.crm_prd_info (
 prd_id INT,
+cat_id NVARCHAR(50),
 prd_key	NVARCHAR(50),
 prd_nm	NVARCHAR(50),
 prd_cost INT,
 prd_line NVARCHAR(50),
-prd_start_dt DATETIME,
-prd_end_dt DATETIME,
+prd_start_dt DATE,
+prd_end_dt DATE,
 dwh_creation_date DATETIME2 DEFAULT GETDATE()
-
 );
 GO
+
 
 
 if object_id ('silver.crm_sales_details','U') is not null
