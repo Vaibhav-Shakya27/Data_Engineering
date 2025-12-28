@@ -3,7 +3,11 @@
 The script creates and executes a proc resoponsible for loading transformed data into the silver layer.
 The data has been cleansed to have refined and cleaner data.
 
-The script truncates existing tables with same name
+Data flow occurs from Bronze -> Silver layer tables post ETL (Extract, Transform and Loading)
+
+The script truncates and loads existing tables with same name
+
+EXEC silver.sp_load_silver;
 ----------------------------------------------------------------
 */
 
@@ -249,4 +253,4 @@ END
 ;
 
 
-EXEC silver.sp_load_silver;
+
